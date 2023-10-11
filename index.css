@@ -65,12 +65,18 @@ body {
     background-color: gray;
   }
 
-#like-button {
-    display: block;
+  #like-button {
+    display: inline-block; 
     background-color: #333;
     color: white;
     cursor: pointer;
     padding: 10px 20px;
-    
+    margin-right: 10px;
 }
+
+#like-count {
+    display: inline-block; 
+    margin: 0; 
+}
+
     
