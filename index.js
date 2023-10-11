@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
             };
             let p = document.createElement("p")
             p.textContent = inputVal
-            jokesDiv.appendChild(p)
+            jokesDiv.appendChild(p);
+            event.target.input.value="";
         })
     })
 })
