@@ -1,7 +1,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: navajowhite;
     margin: 0;
     padding: 0;
   }
@@ -9,6 +9,7 @@ body {
   h1 {
     text-align: center;
     color: #333;
+    font-family: fantasy;
   }
   
  
@@ -53,6 +54,7 @@ body {
     padding: 10px;
     margin: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
   }
 
 #jokes {
@@ -66,17 +68,28 @@ body {
   }
 
   #like-button {
-    display: inline-block; 
+    display: inline-block;
     background-color: #333;
     color: white;
     cursor: pointer;
     padding: 10px 20px;
-    margin-right: 10px;
+    margin: 0 auto;
 }
 
 #like-count {
-    display: inline-block; 
-    margin: 0; 
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+
 }
 
     
