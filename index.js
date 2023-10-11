@@ -7,6 +7,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
         <h2>${data.setup}<h2>
         <h2>${data.punchline}<h2>`
 
+        let likebutton = document.getElementById("like-button");
+        let likecountElement = document.getElementById("like-count");
+        let likecount =0;
+        likebutton.addEventListener("click", ()=>{
+            likecount++;
+            likecountElement.innerText = likecount;
+        });
+
         let button =document.getElementById("btn")
         button.addEventListener("click",()=>{
             location.reload(false)
