@@ -32,7 +32,35 @@ document.addEventListener("DOMContentLoaded", ()=>{
             jokesDiv.appendChild(p);
             event.target.input.value="";
         })
+        let saveButton = document.getElementById("save-button");
+        saveButton.addEventListener("click", () => {
+            let inputVal = form.input.value;
+            let newJoke = {
+                setup: inputVal,
+                punchline: "Your custom punchline here"
+            };
+
+          
+            fetch("db.json")
+                .then(response => response.json())
+                .then(data => {
+                    data.push(newJoke);
+                    return fetch("db.json", {
+                        method: "POST",
+                        body: JSON.stringify(data),
+                        headers: {
+                            "Content-Type": "application/json"
+                        }
+                    });
+                })
+                .then(() => {
+                    console.log("Form content saved to db.json");
+                })
+                .catch(error => {
+                    console.error("Error saving form content:", error);
+                });
     })
+})
 })
 
 
