@@ -32,17 +32,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             jokesDiv.appendChild(p);
             event.target.input.value="";
         })
-        let saveButton = document.getElementById("save-button");
-        saveButton.addEventListener("click", () => {
-            let inputVal = form.input.value;
-            let newJoke = {
-                setup: inputVal,
-                punchline: "Your custom punchline here"
-            };
-
-          
     })
-})
 })
 
 
