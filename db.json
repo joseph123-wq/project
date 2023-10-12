@@ -1,11 +1,3 @@
 {
-    "jokes": [
-      {
-        "id": 1,
-        "setup": "Why did the chicken cross the road?",
-        "punchline": "To get to the other side."
-      }
-    ],
-    "likeCount": 0,
-    "customJokes": []
+    "likes": 0
   }
