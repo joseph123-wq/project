@@ -7,33 +7,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
         <h2>${data.setup}<h2>
         <h2>${data.punchline}<h2>`
 
-        document.addEventListener("DOMContentLoaded", () => {
-            // Fetch the initial like count from the local server
-            fetch("http://localhost:3000/likes")
-              .then((response) => response.json())
-              .then((data) => {
-                let likecount = data.likes;
-                let likecountElement = document.getElementById("like-count");
-                likecountElement.innerText = likecount;
-              });
-          
-            let likebutton = document.getElementById("like-button");
-            likebutton.addEventListener("click", () => {
-              // Increment the like count and update the local server
-              fetch("http://localhost:3000/likes", {
-                method: "PATCH",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ likes: 1 }),
-              })
-                .then((response) => response.json())
-                .then((data) => {
-                  let likecountElement = document.getElementById("like-count");
-                  likecountElement.innerText = data.likes;
-                });
-            });
-          
+        let likebutton = document.getElementById("like-button");
+        let likecountElement = document.getElementById("like-count");
+        let likecount =0;
+        likebutton.addEventListener("click", ()=>{
+            likecount++;
+            likecountElement.innerText = likecount;
         });
 
         let button =document.getElementById("btn")
