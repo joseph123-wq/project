@@ -7,4 +7,5 @@ This app functions in a way that it fetches data from an online api and then the
 
 ## Architecture
 As seen on the javascript code, data is fetched from the API and then the code displays it on the screen.
-The user is then presented with a comment button for him/her to add a comment
+The user is then presented with a comment button for him/her to add a comment.
+After the comments, the user is given a button to generate a new joke.
