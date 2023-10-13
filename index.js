@@ -19,21 +19,34 @@ document.addEventListener("DOMContentLoaded", ()=>{
         button.addEventListener("click",()=>{
             location.reload(false)
         })
-        let form = document.getElementById("form")
-        form.addEventListener("submit",(event)=>{
-            event.preventDefault()
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
             let inputVal = event.target.input.value;
             let newJoke = {
                 setup: inputVal,
                 punchline: "Your custom punchline here"
             };
-            let p = document.createElement("p")
-            p.textContent = inputVal
-            jokesDiv.appendChild(p);
-            event.target.input.value="";
+            let commentDiv = document.createElement("div");
+        
+            let p = document.createElement("p");
+            p.textContent = inputVal;
+        
+            let deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.addEventListener("click", () => {
+                commentDiv.remove();
+            });
+        
+            commentDiv.appendChild(p);
+            commentDiv.appendChild(deleteButton);
+            jokesDiv.appendChild(commentDiv);
+        
+            event.target.input.value = "";
+        });
+        
         })
     })
-})
+
 
 
   
